@@ -61,9 +61,7 @@ module ParallelTests
           `#{cmd}`
         end
 
-        def color
-          '--color --tty' if $stdout.tty?
-        end
+        def color; end
 
         def spec_opts
           options_file = ['.rspec_parallel', 'spec/parallel_spec.opts', 'spec/spec.opts'].detect{|f| File.file?(f) }
